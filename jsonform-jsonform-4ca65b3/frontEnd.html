@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JSON Form</title>
+    <link rel="stylesheet" type="text/css" href="deps/opt/bootstrap.css" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="formDiv">
+      <header>
+        <h1>
+          JSON Form Test
+          <span class="imgSpan">
+            <img
+              src="../images/alexander-shatov-mr4JG4SYOF8-unsplash.jpg"
+              alt="logo"
+              width="50"
+              height="50"
+          /></span>
+        </h1>
+      </header>
+
+      <div class="scrollForm"><form class="showForm"></form></div>
+    </div>
+
+    <div id="showMsg" class="showMsgClass"></div>
+    <script type="text/javascript" src="deps/jquery.min.js"></script>
+    <script type="text/javascript" src="deps/underscore.js"></script>
+    <script type="text/javascript" src="deps/opt/jsv.js"></script>
+    <script type="text/javascript" src="lib/jsonform.js"></script>
+    <script type="text/javascript">
+      $("form").jsonForm({
+        schema: {
+          name: {
+            type: "string",
+            title: "Name",
+            required: true,
+          },
+          Age: {
+            type: "number",
+            title: "Age",
+            required: true,
+          },
+          Gender: {
+            type: "string",
+            enum: ["Male", "Female", "Undisclosed"],
+            required: true,
+          },
+          Height: {
+            type: "number",
+            // required: true,
+          },
+          Date_Of_Birth: {
+            type: "string",
+            // format: "date",
+            format: "date",
+            required: true,
+          },
+          Rating: {
+            type: "integer",
+            required: true,
+          },
+
+          Date: {
+            type: "string",
+            format: "date",
+            required: true,
+          },
+          Time: {
+            type: "string",
+            format: "time",
+            required: true,
+          },
+          Date_Time: {
+            type: "string",
+            format: "date-time",
+            required: true,
+          },
+
+          Street: {
+            type: "string",
+            required: true,
+          },
+          Streetnumber: {
+            type: "string",
+            required: true,
+          },
+          PostalCode: {
+            type: "string",
+            required: true,
+          },
+          City: {
+            type: "string",
+            required: true,
+          },
+          Remember_Me: {
+            type: "boolean",
+            // required: true,
+          },
+        },
+
+        onSubmit: function (errors, values) {
+          let name = $("#jsonform-1-elt-name").val();
+          let age = $("#jsonform-1-elt-Age").val();
+          let gender = $("#jsonform-1-elt-Gender").val();
+          let height = $("#jsonform-1-elt-Height").val();
+          let dob = $("#jsonform-1-elt-Date_Of_Birth").val();
+          let rating = $("#jsonform-1-elt-Rating").val();
+          // let Remember_Me = $("#jsonform-1-elt-Remember_Me").val();
+          let date = $("#jsonform-1-elt-Date").val();
+          let time = $("#jsonform-1-elt-Time").val();
+          let dateTime = $("#jsonform-1-elt-Date_Time").val();
+          let street = $("#jsonform-1-elt-Street").val();
+          let streetNumber = $("#jsonform-1-elt-Streetnumber").val();
+          let postalCode = $("#jsonform-1-elt-PostalCode").val();
+          let city = $("#jsonform-1-elt-City").val();
+          // let inputFields = document.querySelectorAll(".form-control");
+
+          if (!name) {
+            document.querySelector("#jsonform-1-elt-name").style.border =
+              "1px solid red";
+          }
+
+          if (!age) {
+            document.querySelector("#jsonform-1-elt-Age").style.border =
+              "1px solid red";
+          }
+
+          // if (!gender) {
+          //   document.querySelector("#jsonform-1-elt-Gender").style.border =
+          //     "1px solid red";
+          // }
+
+          if (!height) {
+            document.querySelector("#jsonform-1-elt-Height").style.border =
+              "1px solid red";
+          }
+
+          if (!dob) {
+            document.querySelector(
+              "#jsonform-1-elt-Date_Of_Birth"
+            ).style.border = "1px solid red";
+          }
+
+          if (!rating) {
+            document.querySelector("#jsonform-1-elt-Rating").style.border =
+              "1px solid red";
+          }
+
+          if (!date) {
+            document.querySelector("#jsonform-1-elt-Date").style.border =
+              "1px solid red";
+          }
+
+          if (!time) {
+            document.querySelector("#jsonform-1-elt-Time").style.border =
+              "1px solid red";
+          }
+
+          if (!dateTime) {
+            document.querySelector("#jsonform-1-elt-Date_Time").style.border =
+              "1px solid red";
+          }
+
+          if (!street) {
+            document.querySelector("#jsonform-1-elt-Street").style.border =
+              "1px solid red";
+          }
+
+          if (!streetNumber) {
+            document.querySelector(
+              "#jsonform-1-elt-Streetnumber"
+            ).style.border = "1px solid red";
+          }
+
+          if (!postalCode) {
+            document.querySelector("#jsonform-1-elt-PostalCode").style.border =
+              "1px solid red";
+          }
+
+          if (!city) {
+            document.querySelector("#jsonform-1-elt-City").style.border =
+              "1px solid red";
+          }
+
+          // if (
+          //   !name ||
+          //   !age ||
+          //   !gender ||
+          //   !height ||
+          //   !dob ||
+          //   !rating ||
+          //   !date ||
+          //   !time ||
+          //   !dateTime ||
+          //   !street ||
+          //   !streetNumber ||
+          //   !postalCode ||
+          //   !city
+          // ) {
+          //   for (const x of inputFields) {
+          //     x.style.border = "1px solid red";
+          //     x.style.borderRadius = "5px";
+          //   }
+
+          //   for (let i = 0; i < inputFields.length; i++) {
+          //     inputFields[i].style.border = "1px solid red";
+          //     inputFields[i].style.borderRadius = "5px";
+          //   }
+          // }
+
+          if (values) {
+            // confirm("Sure to submit?");
+            // alert(`Hello ${values.name}, your submit was successful`);
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
