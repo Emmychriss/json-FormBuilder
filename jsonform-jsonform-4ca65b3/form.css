@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url(https://unsplash.com/photos/2Hzmz15wGik); */
+  background-color: rgba(0, 0, 0, 0.55);
+  background-image: url(../images/pine-watt-2Hzmz15wGik-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.scrollForm {
+  overflow-y: scroll;
+  height: 62vh;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.formDiv {
+  background: #f6f6f6;
+  width: 500px;
+  overflow: hidden;
+  height: 85%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 40px;
+  padding-bottom: 80px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px 3px #0000002c;
+  opacity: 0.9;
+}
+
+.formDiv:hover {
+  width: 502.5px;
+  opacity: 0.85;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  color: rgb(85, 85, 85);
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.controls .form-control {
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.controls .form-control:hover {
+  cursor: text;
+  border: 1px solid black;
+}
+
+.formDiv input,
+.formDiv select {
+  padding: 10px;
+  /* border: 1px solid black; */
+}
+
+.btn-primary {
+  float: right;
+  margin: 0;
+}
+
+/* form div {
+  width: 100%;
+}
+
+form div label {
+  font-size: 15px;
+}
+
+form div .btn {
+  left: 50%;
+  width: 100px;
+}
+
+form div .form-control {
+  width: 80%;
+  height: 30px;
+}
+
+.showForm {
+  width: 50%;
+  margin: auto;
+  border-radius: 2%;
+  background: #c4d3f6;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+} */
